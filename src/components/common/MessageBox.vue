@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div v-bind:class="[messageList.isActive === true ? 'message-box' : 'message-box-right']">
-      <img class="avatar" :src="messageList.avatar" />
-      <div v-bind:class="[messageList.isActive === true ? 'triangle' : 'triangle-right']"></div>
-      <div class="text-message" v-text="messageList.message">
+    <div v-bind:class="[isActive === true ? 'message-box' : 'message-box-right']">
+      <img class="avatar" :src="avatar" />
+      <div v-bind:class="[isActive === true ? 'triangle' : 'triangle-right']"></div>
+      <div class="text-message" v-text="message">
       </div>
     </div>
   </div>
@@ -12,10 +12,7 @@
 <script>
 export default {
   name: "MessageBox",
-  props:{
-    messageList: Array
-     
-  },
+  props:['message','isActive','avatar'],
   data() {
     return {
     };

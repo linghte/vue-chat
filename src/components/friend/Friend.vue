@@ -1,7 +1,8 @@
 <template>
   <div>
     <div v-for="(info,key) in messageList" :key="key">
-      <MessageBox father-component="Friend"></MessageBox>
+      <MessageBox father-component="Friend"  :message="info.message" 
+    :isActive="info.isActive" :avatar="info.avatar"></MessageBox>
     </div>
   </div>
 </template>
